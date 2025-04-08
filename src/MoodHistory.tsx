@@ -25,7 +25,6 @@ const MoodHistory: React.FC<MoodHistoryProps> = ({ history }) => {
 
 	const goToNextPage = () => {
 		setCurrentPage((prev) => Math.min(prev + 1, totalPages));
-		totalPages;
 	};
 
 	// --- Date Formatting (remains the same) ---
@@ -37,6 +36,7 @@ const MoodHistory: React.FC<MoodHistoryProps> = ({ history }) => {
 			const shortDate = date.toLocaleDateString(undefined, {
 				dateStyle: "short",
 			});
+			// const updateTime = date.toLocaleTimeString(undefined, { timeStyle: 'short' });
 			return `${dayName}, ${shortDate}`;
 		} catch (error) {
 			console.error("Error formatting date:", error);
