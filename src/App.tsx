@@ -51,6 +51,7 @@ const getLocalDateKey = (date: Date): string => {
 const App: React.FC = () => {
 	const [moodHistory, setMoodHistory] = useState<MoodEntry[]>(() => {
 		const savedHistory = localStorage.getItem(LOCAL_STORAGE_KEY);
+
 		if (savedHistory) {
 			try {
 				const parsedData = JSON.parse(savedHistory);
