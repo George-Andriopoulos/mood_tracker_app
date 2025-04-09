@@ -3,9 +3,8 @@ import MoodSelector from "./MoodSelector";
 import MoodHistory from "./MoodHistory";
 import type { Mood, MoodEntry } from "./types";
 
-// PREDEFINED_MOODS array remains the same as before...
+// PREDEFINED_MOODS
 const PREDEFINED_MOODS: Mood[] = [
-	// ... (keep the full list from the previous TS example) ...
 	{ name: "happy", emoji: "😊", color: "#4CAF50" },
 	{ name: "excited", emoji: "🤩", color: "#FFC107" },
 	{ name: "motivated", emoji: "💪", color: "#FF9800" },
@@ -132,12 +131,9 @@ const App: React.FC = () => {
 				</header>
 
 				<main className='space-y-10 md:space-y-12'>
-					{/* Pass PREDEFINED_MOODS and the updated handler */}
 					<MoodSelector
 						moods={PREDEFINED_MOODS}
 						onMoodSelected={handleMoodSelected}
-						// Optionally disable if needed, but logic prevents adding for past days
-						// disabled={!canSelectMoodToday}
 					/>
 					<MoodHistory history={moodHistory} />
 				</main>

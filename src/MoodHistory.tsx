@@ -60,9 +60,7 @@ const MoodHistory: React.FC<MoodHistoryProps> = ({ history }) => {
 			) : (
 				<div className='min-h-[400px] border border-gray-200 rounded-lg shadow-inner bg-gray-50 p-3 md:p-4'>
 					{" "}
-					{/* Added min-h for consistent height */}
 					<ul className='space-y-3'>
-						{/* Map over currentItems instead of full history */}
 						{currentItems.map((entry) => (
 							<li
 								key={entry.id}
@@ -85,7 +83,7 @@ const MoodHistory: React.FC<MoodHistoryProps> = ({ history }) => {
 				</div>
 			)}
 
-			{/* Pagination Controls Section - Only show if more than one page */}
+			{/* Pagination Controls Section */}
 			{totalPages > 1 && (
 				<div className='mt-6 flex items-center justify-between'>
 					{/* Previous Button */}
